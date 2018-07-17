@@ -1,0 +1,47 @@
+@import './lib/reset.scss';
+
+html, body, .container {
+  @include rect(100%, 100%);
+}
+
+html{
+  @include root-scroll();
+}
+
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+  header{
+    @include rect(100%, 0.45rem);
+    @include background-color(#f66);
+    @include font-size(0.16rem);
+    @include text-color(#fff);
+  }
+  .content{
+    @include flex();
+    @include rect(100%, auto);
+    @include overflow();
+  }
+  footer{
+    @include rect(100%, 0.5rem);
+    @include background-color(#dfdfdf);
+  }
+}
+.slide-fade-enter-active {
+  transition: all .3s linear;
+}
+.slide-fade-leave-active {
+  transition: all 0s linear;
+}
+.slide-fade-enter {
+  transform: translateX(100%);
+}
+.slide-fade-enter-to {
+  transform: translateX(0%);
+}
+.slide-fade-leave {
+  transform: translateX(0);
+}
+.slide-fade-leave-to {
+  transform: translateX(-100%);
+}

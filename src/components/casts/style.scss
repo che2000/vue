@@ -1,0 +1,11 @@
+@import '@/lib/reset.scss';
+.castslist{
+  li{
+    @include rect(100%, 1rem);
+    @include border(0 0 1px 0, #eee);
+    img{
+      @include rect(auto, 0.9rem);
+      @include margin(0.05rem);
+    }
+  }
+}
